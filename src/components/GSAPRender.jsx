@@ -68,12 +68,26 @@ const GSAPRender = () => {
 
     const targetX = parentWidth - boxWidth;
 
-    gsap.to(box, {
-      x: targetX,
-      duration: 2,
+    const allBox = document.querySelectorAll(".box");
+    console.log("🚀 ~ useLayoutEffect ~ allBox:", allBox);
+
+    gsap.to(allBox, {
+      // x: targetX,
+      duration: 1,
       ease: "power2.inOut",
-      rotation: 75,
-      background: "blueviolet"
+      // rotation: 359.9,
+      background: "red",
+      repeat: -1,
+      // yoyo: true,
+      stagger: 0.2,
+    });
+
+    gsap.to("#box0", {
+      duration: 5,
+      rotation: 360,
+      background: "red",
+      repeat: -1,
+      repeatDelay: 0,
     });
   }, []);
 
@@ -102,14 +116,223 @@ const GSAPRender = () => {
     <div className="bg-gray-700 p-4 h-[calc(100vh-76px)] border-t-4 border-amber-400">
       <h2 className="uppercase text-2xl">all gsap renderer</h2>
 
-      <div ref={parentRef} className="border border-blue-400">
+      <div
+        ref={parentRef}
+        className="border border-blue-400 flex gap-16 flex-wrap"
+      >
         <div
           ref={boxContainer}
           id="box"
           onClick={rotateBoxHandler}
-          className="w-[50px] h-[50px] border border-red-500 mt-4 rounded-md cursor-pointer"
+          className="box w-[10px] h-[10px] border border-red-500 mt-4 rounded-md cursor-pointer bg-white"
+        ></div>
+        <div
+          ref={boxContainer}
+          id="box"
+          onClick={rotateBoxHandler}
+          className="box w-[10px] h-[10px] border border-red-500 mt-4 rounded-md cursor-pointer bg-white"
+        ></div>
+        <div
+          ref={boxContainer}
+          id="box"
+          onClick={rotateBoxHandler}
+          className="box w-[10px] h-[10px] border border-red-500 mt-4 rounded-md cursor-pointer bg-white"
+        ></div>
+        <div
+          ref={boxContainer}
+          id="box"
+          onClick={rotateBoxHandler}
+          className="box w-[10px] h-[10px] border border-red-500 mt-4 rounded-md cursor-pointer bg-white"
+        ></div>
+        <div
+          ref={boxContainer}
+          id="box"
+          onClick={rotateBoxHandler}
+          className="box w-[10px] h-[10px] border border-red-500 mt-4 rounded-md cursor-pointer bg-white"
+        ></div>
+        <div
+          ref={boxContainer}
+          id="box"
+          onClick={rotateBoxHandler}
+          className="box w-[10px] h-[10px] border border-red-500 mt-4 rounded-md cursor-pointer bg-white"
+        ></div>
+        <div
+          ref={boxContainer}
+          id="box"
+          onClick={rotateBoxHandler}
+          className="w-[10px] h-[10px] border border-red-500 mt-4 rounded-md cursor-pointer bg-white"
+        ></div>
+        <div
+          ref={boxContainer}
+          id="box"
+          onClick={rotateBoxHandler}
+          className="w-[10px] h-[10px] border border-red-500 mt-4 rounded-md cursor-pointer bg-white"
+        ></div>
+        <div
+          ref={boxContainer}
+          id="box"
+          onClick={rotateBoxHandler}
+          className="w-[10px] h-[10px] border border-red-500 mt-4 rounded-md cursor-pointer bg-white"
+        ></div>
+        <div
+          ref={boxContainer}
+          id="box"
+          onClick={rotateBoxHandler}
+          className="w-[10px] h-[10px] border border-red-500 mt-4 rounded-md cursor-pointer bg-white"
+        ></div>
+        <div
+          ref={boxContainer}
+          id="box"
+          onClick={rotateBoxHandler}
+          className="w-[10px] h-[10px] border border-red-500 mt-4 rounded-md cursor-pointer bg-white"
+        ></div>
+        <div
+          ref={boxContainer}
+          id="box"
+          onClick={rotateBoxHandler}
+          className="w-[10px] h-[10px] border border-red-500 mt-4 rounded-md cursor-pointer bg-white"
+        ></div>
+        <div
+          ref={boxContainer}
+          id="box"
+          onClick={rotateBoxHandler}
+          className="w-[10px] h-[10px] border border-red-500 mt-4 rounded-md cursor-pointer bg-white"
+        ></div>
+        <div
+          ref={boxContainer}
+          id="box"
+          onClick={rotateBoxHandler}
+          className="w-[10px] h-[10px] border border-red-500 mt-4 rounded-md cursor-pointer bg-white"
+        ></div>
+        <div
+          ref={boxContainer}
+          id="box"
+          onClick={rotateBoxHandler}
+          className="w-[10px] h-[10px] border border-red-500 mt-4 rounded-md cursor-pointer bg-white"
+        ></div>
+        <div
+          ref={boxContainer}
+          id="box"
+          onClick={rotateBoxHandler}
+          className="w-[10px] h-[10px] border border-red-500 mt-4 rounded-md cursor-pointer bg-white"
+        ></div>
+        <div
+          ref={boxContainer}
+          id="box"
+          onClick={rotateBoxHandler}
+          className="w-[10px] h-[10px] border border-red-500 mt-4 rounded-md cursor-pointer bg-white"
+        ></div>
+        <div
+          ref={boxContainer}
+          id="box"
+          onClick={rotateBoxHandler}
+          className="w-[10px] h-[10px] border border-red-500 mt-4 rounded-md cursor-pointer bg-white"
+        ></div>
+        <div
+          ref={boxContainer}
+          id="box"
+          onClick={rotateBoxHandler}
+          className="w-[10px] h-[10px] border border-red-500 mt-4 rounded-md cursor-pointer bg-white"
+        ></div>
+        <div
+          ref={boxContainer}
+          id="box"
+          onClick={rotateBoxHandler}
+          className="w-[10px] h-[10px] border border-red-500 mt-4 rounded-md cursor-pointer bg-white"
+        ></div>
+        <div
+          ref={boxContainer}
+          id="box"
+          onClick={rotateBoxHandler}
+          className="w-[10px] h-[10px] border border-red-500 mt-4 rounded-md cursor-pointer bg-white"
+        ></div>
+        <div
+          ref={boxContainer}
+          id="box"
+          onClick={rotateBoxHandler}
+          className="w-[10px] h-[10px] border border-red-500 mt-4 rounded-md cursor-pointer bg-white"
+        ></div>
+        <div
+          ref={boxContainer}
+          id="box"
+          onClick={rotateBoxHandler}
+          className="w-[10px] h-[10px] border border-red-500 mt-4 rounded-md cursor-pointer bg-white"
+        ></div>
+        <div
+          ref={boxContainer}
+          id="box"
+          onClick={rotateBoxHandler}
+          className="w-[10px] h-[10px] border border-red-500 mt-4 rounded-md cursor-pointer bg-white"
+        ></div>
+        <div
+          ref={boxContainer}
+          id="box"
+          onClick={rotateBoxHandler}
+          className="w-[10px] h-[10px] border border-red-500 mt-4 rounded-md cursor-pointer bg-white"
+        ></div>
+        <div
+          ref={boxContainer}
+          id="box"
+          onClick={rotateBoxHandler}
+          className="w-[10px] h-[10px] border border-red-500 mt-4 rounded-md cursor-pointer bg-white"
+        ></div>
+        <div
+          ref={boxContainer}
+          id="box"
+          onClick={rotateBoxHandler}
+          className="w-[10px] h-[10px] border border-red-500 mt-4 rounded-md cursor-pointer bg-white"
+        ></div>
+        <div
+          ref={boxContainer}
+          id="box"
+          onClick={rotateBoxHandler}
+          className="w-[10px] h-[10px] border border-red-500 mt-4 rounded-md cursor-pointer bg-white"
+        ></div>
+        <div
+          ref={boxContainer}
+          id="box"
+          onClick={rotateBoxHandler}
+          className="w-[10px] h-[10px] border border-red-500 mt-4 rounded-md cursor-pointer bg-white"
+        ></div>
+        <div
+          ref={boxContainer}
+          id="box"
+          onClick={rotateBoxHandler}
+          className="w-[10px] h-[10px] border border-red-500 mt-4 rounded-md cursor-pointer bg-white"
+        ></div>
+        <div
+          ref={boxContainer}
+          id="box"
+          onClick={rotateBoxHandler}
+          className="w-[10px] h-[10px] border border-red-500 mt-4 rounded-md cursor-pointer bg-white"
+        ></div>
+        <div
+          ref={boxContainer}
+          id="box"
+          onClick={rotateBoxHandler}
+          className="w-[10px] h-[10px] border border-red-500 mt-4 rounded-md cursor-pointer bg-white"
+        ></div>
+        <div
+          ref={boxContainer}
+          id="box"
+          onClick={rotateBoxHandler}
+          className="w-[10px] h-[10px] border border-red-500 mt-4 rounded-md cursor-pointer bg-white"
+        ></div>
+        <div
+          ref={boxContainer}
+          id="box"
+          onClick={rotateBoxHandler}
+          className="w-[10px] h-[10px] border border-red-500 mt-4 rounded-md cursor-pointer bg-white"
+        ></div>
+        <div
+          ref={boxContainer}
+          id="box0"
+          onClick={rotateBoxHandler}
+          className="w-[50px] h-[50px] border border-red-500 mt-4 rounded-full cursor-pointer bg-white"
         ></div>
       </div>
+
+      <div className="mt-10 border border-blue-200 w-full p-10"></div>
     </div>
   );
 };
